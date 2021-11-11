@@ -21,15 +21,48 @@ void ofApp::draw()
     ofNoFill();
     if (mode == '1')
     {
-        drawMode1(ofGetWidth() / 2, ofGetHeight() / 2, 4);
+        drawMode1(ofGetWidth() / 2, ofGetHeight() / 2, var);
+        if(increase){
+            var++;
+            increase = false;
+        }
+        if(decrease){
+            var -= 1;
+            decrease = false;
+            if(var < 0){
+                var = 0;
+            }
+        }
     }
     else if (mode == '2')
     {
-        drawMode2(200, 10, ofGetWidth() / 2, ofGetHeight() - 50, 30);
+        drawMode2(200, var, ofGetWidth() / 2, ofGetHeight() - 50, 30);
+        if(increase){
+            var++;
+            increase = false;
+        }
+        if(decrease){
+            var -= 1;
+            decrease = false;
+            if(var < 0){
+                var = 0;
+            }
+        }
     }
     else if (mode == '3')
     {
-        drawMode3(ofGetWidth() / 3, 10, ofGetHeight() / 2, 10);
+        drawMode3(ofGetWidth() / 3, 10, ofGetHeight() / 2, var);
+        if(increase){
+            var++;
+            increase = false;
+        }
+        if(decrease){
+            var -= 1;
+            decrease = false;
+            if(var < 0){
+                var = 0;
+            }
+        }
     }
 }
 void ofApp::drawMode1(int x, int y, int n)
@@ -99,6 +132,14 @@ void ofApp::keyPressed(int key)
         break;
     case '4':
         mode = '4';
+        break;
+
+    // Para aumentar y disminuir el tamaño
+    case '=':
+        increase = true;
+        break;
+    case '-':
+        decrease = true;
         break;
     }
 }

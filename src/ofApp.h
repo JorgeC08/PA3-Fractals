@@ -25,4 +25,9 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 	private:
 		char mode = '1';
+		
+		bool increase = false;
+		bool decrease = false;
+		int var = 1;
+
 };
