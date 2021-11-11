@@ -21,6 +21,7 @@ void ofApp::draw()
     ofNoFill();
     if (mode == '1')
     {
+        ofSetColor(0, 128, 128);
         drawMode1(ofGetWidth() / 2, ofGetHeight() / 2, var);
         if(increase){
             var++;
@@ -36,6 +37,7 @@ void ofApp::draw()
     }
     else if (mode == '2')
     {
+        ofSetColor(220, 20, 60);
         drawMode2(200, var, ofGetWidth() / 2, ofGetHeight() - 50, 30);
         if(increase){
             var++;
@@ -51,6 +53,7 @@ void ofApp::draw()
     }
     else if (mode == '3')
     {
+        ofSetColor(128, 0, 128);
         drawMode3(ofGetWidth() / 3, 10, ofGetHeight() / 2, var);
         if(increase){
             var++;
