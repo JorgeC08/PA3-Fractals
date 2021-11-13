@@ -73,7 +73,7 @@ void ofApp::drawMode1(int x, int y, int n)
 {
     if (n != 0)
     {
-        ofDrawCircle(x, y, 100);
+        ofDrawRectangle(x, y, 100, 100);
         drawMode1(x + 100, y, n - 1);
         drawMode1(x - 100, y, n - 1);
         drawMode1(x, y + 100, n - 1);
