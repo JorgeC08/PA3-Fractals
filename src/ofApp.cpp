@@ -3,6 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
+    ofSetBackgroundColor(0, 0, 0);
 }
 
 //--------------------------------------------------------------
@@ -10,7 +11,7 @@ void ofApp::update()
 {
     /* The update method is called muliple times per second
     It's in charge of updating variables and the logic of our app */
-    ofSetBackgroundColor(0, 0, 0);
+    // ofSetBackgroundColor(0, 0, 0);
 }
 
 //--------------------------------------------------------------
@@ -19,7 +20,7 @@ void ofApp::draw()
     /* The update method is called muliple times per second
     It's in charge of drawing all figures and text on screen */
     ofNoFill();
-    if (mode == '1')
+    if (mode1)
     {
         ofSetColor(0, 128, 128);
         drawMode1(ofGetWidth() / 2, ofGetHeight() / 2, var);
@@ -35,7 +36,7 @@ void ofApp::draw()
             }
         }
     }
-    else if (mode == '2')
+    if (mode2)
     {
         ofSetColor(220, 20, 60);
         drawMode2(200, var, ofGetWidth() / 2, ofGetHeight() - 50, 30);
@@ -51,7 +52,7 @@ void ofApp::draw()
             }
         }
     }
-    else if (mode == '3')
+    if (mode3)
     {
         ofSetColor(128, 0, 128);
         drawMode3(ofGetWidth() / 3, 10, ofGetHeight() / 2, var);
@@ -125,16 +126,18 @@ void ofApp::keyPressed(int key)
     switch (key)
     {
     case '1':
-        mode = '1';
+        mode1 = true;
         break;
     case '2':
-        mode = '2';
+        mode2 = true;
         break;
     case '3':
-        mode = '3';
+        mode3 = true;
         break;
     case '4':
-        mode = '4';
+        mode1 = false;
+        mode2 = false;
+        mode3 = false;
         break;
 
     // Para aumentar y disminuir el tamaño

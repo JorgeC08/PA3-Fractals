@@ -24,7 +24,10 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 	private:
-		char mode = '1';
+
+		bool mode1 = true;
+		bool mode2 = false;
+		bool mode3 = false;
 		
 		bool increase = false;
 		bool decrease = false;
