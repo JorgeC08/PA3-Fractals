@@ -91,10 +91,43 @@ void ofApp::drawMode2(int length, int n, int x, int y, int d)
         int rightBranchX = x + length * cos(PI / 180 * d);
         int rightBranchY = middleY - length * sin(PI / 180 * d);
 
-        ofDrawLine(x, y, x, y - length);
-        ofDrawLine(x, y - length, x, y - length*2);
-        ofDrawLine(x, y - length, rightBranchX, rightBranchY);
-        ofDrawLine(x, y - length, leftBranchX, leftBranchY);
+        // ofDrawLine(x, y, x, y - length);
+        // ofDrawLine(x, y - length, x, y - length*2);
+        // ofDrawLine(x, y - length, rightBranchX, rightBranchY);
+        // ofDrawLine(x, y - length, leftBranchX , leftBranchY);
+
+        // ofDrawLine(x + 200, y, x + 200, y - length / 2);
+        // ofDrawLine(x + 200, y - length / 2, x + 200, y - length);
+        // ofDrawLine(x + 200, y - length / 2, rightBranchX + 200, rightBranchY + length / 2);
+        // ofDrawLine(x + 200, y - length / 2, leftBranchX + 200, leftBranchY + length / 2);
+
+
+
+        int leftBranchSmallX = x - length * cos(PI / 180 * d);
+        int leftBranchSmallY = middleY + length /2  * sin(PI / 180 * d);
+        int rightBranchSmallX = x + length * cos(PI / 180 * d);
+        int rightBranchSmallY = middleY + length / 2 * sin(PI / 180 * d);
+
+        // ofDrawLine(x + 200, y, x + 200, y - length);
+        // ofDrawLine(x + 200, y - length, x + 200, y - length*2);
+        // ofDrawLine(x + 200, y - length, rightBranchX + 200, rightBranchY);
+        // ofDrawLine(x + 200, y - length, leftBranchX + 200, leftBranchY);
+
+        // ofDrawLine(x - 200, y, x - 200, y - length);
+        // ofDrawLine(x - 200, y - length, x - 200, y - length);
+        // ofDrawLine(x - 200, y - length, rightBranchX - 100, rightBranchY + length / 2);
+        // ofDrawLine(x - 200, y - length, leftBranchX - 300, leftBranchX + length / 2);
+
+        ofDrawLine(x + 200, y, x + 200, y - length / 2);
+        ofDrawLine(x + 200, y - length / 2, x + 200, y - length);
+        ofDrawLine(x + 200, y - length / 2, rightBranchSmallX + 200, rightBranchSmallY);
+        ofDrawLine(x + 200, y - length / 2, leftBranchSmallX + 200, leftBranchSmallY);
+
+        // ofDrawLine(x + 200, y, x + 200, y - length / 2);
+        // ofDrawLine(x + 200, y - length / 2, x + 200, y - length);
+        // ofDrawLine(x + 200, y - length / 2, rightBranchSmallX + 100, rightBranchSmallY);
+        // ofDrawLine(x + 200, y - length / 2, leftBranchSmallX + 300, leftBranchSmallY);
+
 
         drawMode2(length / 2, n - 1, rightBranchX, rightBranchY, 30);
         drawMode2(length / 2, n - 1, middleX, middleY, 30);
