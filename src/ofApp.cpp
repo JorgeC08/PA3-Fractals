@@ -126,13 +126,13 @@ void ofApp::keyPressed(int key)
     switch (key)
     {
     case '1':
-        mode1 = true;
+        mode1 = !mode1;
         break;
     case '2':
-        mode2 = true;
+        mode2 = !mode2;
         break;
     case '3':
-        mode3 = true;
+        mode3 = !mode3;
         break;
     case '4':
         mode1 = false;
