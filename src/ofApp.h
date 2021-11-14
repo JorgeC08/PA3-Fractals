@@ -2,6 +2,7 @@
 #include<cmath>
 
 #include "ofMain.h"
+#include "FractalMode.h"
 
 class ofApp : public ofBaseApp{
 	public:
@@ -25,6 +26,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 	private:
 
+		// vector<FractalMode*>;
 		bool mode1 = true;
 		bool mode2 = false;
 		bool mode3 = false;
