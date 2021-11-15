@@ -40,6 +40,8 @@ void ofApp::draw()
     {
         ofSetColor(220, 20, 60);
         drawMode2(200, var, ofGetWidth() / 2, ofGetHeight() - 50, 30);
+        drawMode2(100, var, ofGetWidth() / 4, ofGetHeight() - 50, 30);
+        drawMode2(100, var, ofGetWidth() / 1.25, ofGetHeight() - 50, 30);
         if(increase){
             var++;
             increase = false;
@@ -94,7 +96,8 @@ void ofApp::drawMode2(int length, int n, int x, int y, int d)
         ofDrawLine(x, y, x, y - length);
         ofDrawLine(x, y - length, x, y - length*2);
         ofDrawLine(x, y - length, rightBranchX, rightBranchY);
-        ofDrawLine(x, y - length, leftBranchX, leftBranchY);
+        ofDrawLine(x, y - length, leftBranchX , leftBranchY);
+
 
         drawMode2(length / 2, n - 1, rightBranchX, rightBranchY, 30);
         drawMode2(length / 2, n - 1, middleX, middleY, 30);
@@ -117,6 +120,7 @@ void ofApp::drawMode3(float x, float y, float size, int n)
 
     drawMode3(x, y, size / 2, n - 1);
     drawMode3((a.x + b.x) / 2, (a.y + b.y) / 2, size / 2, n - 1);
+    drawMode3((a.x + c.x) / 2, (a.y + c.y) / 2, size / 2, n - 1);
 }
 
 //--------------------------------------------------------------
