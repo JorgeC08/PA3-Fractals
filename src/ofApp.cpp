@@ -96,7 +96,8 @@ void ofApp::drawMode2(int length, int n, int x, int y, int d)
         ofDrawLine(x, y, x, y - length);
         ofDrawLine(x, y - length, x, y - length*2);
         ofDrawLine(x, y - length, rightBranchX, rightBranchY);
-        ofDrawLine(x, y - length, leftBranchX, leftBranchY);
+        ofDrawLine(x, y - length, leftBranchX , leftBranchY);
+
 
         drawMode2(length / 2, n - 1, rightBranchX, rightBranchY, 30);
         drawMode2(length / 2, n - 1, middleX, middleY, 30);
