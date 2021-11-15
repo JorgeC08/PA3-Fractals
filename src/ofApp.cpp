@@ -40,6 +40,8 @@ void ofApp::draw()
     {
         ofSetColor(220, 20, 60);
         drawMode2(200, var, ofGetWidth() / 2, ofGetHeight() - 50, 30);
+        drawMode2(100, var, ofGetWidth() / 3.99, ofGetHeight() - 50, 30);
+        drawMode2(100, var, ofGetWidth() / 1.32, ofGetHeight() - 50, 30);
         if(increase){
             var++;
             increase = false;
