@@ -30,9 +30,9 @@ class ofApp : public ofBaseApp{
 	private:
 
 		vector<FractalMode*> Fractals;
-		bool mode1 = true;
-		bool mode2 = false;
-		bool mode3 = false;
+		Mode1 *mode1;
+		Mode2 *mode2;
+		Mode3 *mode3;
 		
 		bool increase = false;
 		bool decrease = false;

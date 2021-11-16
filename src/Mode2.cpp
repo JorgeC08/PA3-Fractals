@@ -9,7 +9,12 @@ Mode2::Mode2(int length, int n, int x, int y, int d)
     this->d = d;
 }
 
-void Mode2::draw(int length, int n, int x, int y, int d)
+void Mode2::draw()
+{
+    drawHelper(length, n, x, y, d);
+}
+
+void Mode2::drawHelper(int length, int n, int x, int y, int d)
 {
     if (n != 0)
     {
@@ -26,8 +31,8 @@ void Mode2::draw(int length, int n, int x, int y, int d)
         ofDrawLine(x, y - length, leftBranchX , leftBranchY);
 
 
-        draw(length / 2, n - 1, rightBranchX, rightBranchY, 30);
-        draw(length / 2, n - 1, middleX, middleY, 30);
-        draw(length / 2, n - 1, leftBranchX, leftBranchY, 30);
+        drawHelper(length / 2, n - 1, rightBranchX, rightBranchY, 30);
+        drawHelper(length / 2, n - 1, middleX, middleY, 30);
+        drawHelper(length / 2, n - 1, leftBranchX, leftBranchY, 30);
     }
 }

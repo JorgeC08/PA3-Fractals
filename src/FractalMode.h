@@ -11,11 +11,11 @@ class FractalMode{
 		}
 		bool getActivate()
 		{
-			return activate;
+			return this->activate;
 		}
 		
 	protected:
-		bool activate;
+		bool activate = false;
 
 
 };

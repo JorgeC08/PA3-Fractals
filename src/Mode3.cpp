@@ -8,7 +8,12 @@ Mode3::Mode3(float x, float y, float size, int n)
     this->n = n;
 }
 
-void Mode3::draw(float x, float y, float size, int n)
+void Mode3::draw()
+{
+    drawHelper(x, y, size, n);
+}
+
+void Mode3::drawHelper(float x, float y, float size, int n)
 {
     if (n == 0)
     {
@@ -21,7 +26,7 @@ void Mode3::draw(float x, float y, float size, int n)
 
     ofDrawTriangle(a, b, c);
 
-    draw(x, y, size / 2, n - 1);
-    draw((a.x + b.x) / 2, (a.y + b.y) / 2, size / 2, n - 1);
-    draw((a.x + c.x) / 2, (a.y + c.y) / 2, size / 2, n - 1);
+    drawHelper(x, y, size / 2, n - 1);
+    drawHelper((a.x + b.x) / 2, (a.y + b.y) / 2, size / 2, n - 1);
+    drawHelper((a.x + c.x) / 2, (a.y + c.y) / 2, size / 2, n - 1);
 }
