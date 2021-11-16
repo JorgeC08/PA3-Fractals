@@ -4,6 +4,17 @@
 void ofApp::setup()
 {
     ofSetBackgroundColor(0, 0, 0);
+    Mode1* mod1 = new Mode1(ofGetWidth() / 2, ofGetHeight() / 2, var);
+    Mode2* mod2 = new Mode2(200, var, ofGetWidth() / 2, ofGetHeight() - 50, 30);
+    Mode2* mod2smallelft = new Mode2(100, var, ofGetWidth() / 3.99, ofGetHeight() - 50, 30);
+    Mode2* mod2small1right = new Mode2(100, var, ofGetWidth() / 1.32, ofGetHeight() - 50, 30);
+    Mode3* mod3 = new Mode3(ofGetWidth() / 3, 10, ofGetHeight() / 2, var);
+
+    Fractals.push_back(mod1);
+    Fractals.push_back(mod2);
+    Fractals.push_back(mod2smallelft);
+    Fractals.push_back(mod2small1right);
+    Fractals.push_back(mod3);
 }
 
 //--------------------------------------------------------------
@@ -131,6 +142,7 @@ void ofApp::keyPressed(int key)
     {
     case '1':
         mode1 = !mode1;
+        Fractals[0]->setActivate(true);
         break;
     case '2':
         mode2 = !mode2;

@@ -3,6 +3,9 @@
 
 #include "ofMain.h"
 #include "FractalMode.h"
+#include "Mode1.h"
+#include "Mode2.h"
+#include "Mode3.h"
 
 class ofApp : public ofBaseApp{
 	public:
@@ -26,7 +29,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 	private:
 
-		// vector<FractalMode*>;
+		vector<FractalMode*> Fractals;
 		bool mode1 = true;
 		bool mode2 = false;
 		bool mode3 = false;
