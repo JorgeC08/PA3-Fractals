@@ -9,15 +9,15 @@ Mode4::Mode4(int x, int y, int n)
 
 void Mode4::draw()
 {
+    ofSetColor(0, 255, 0);
     drawHelper(x, y, n);
 }
 void Mode4::drawHelper(int x, int y, float n)
 {
-    ofDrawEllipse(x, y, n, n);
+    ofDrawCircle(x, y, n * 50);
 
     if (n > 1)
     {
-        ofSetColor(0, 128, 128);
         drawHelper(x, y, n * 0.75);
     }
 }
