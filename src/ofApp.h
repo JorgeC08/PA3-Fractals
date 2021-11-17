@@ -7,6 +7,8 @@
 #include "Mode2.h"
 #include "Mode3.h"
 #include "Mode4.h"
+#include "Mode5.h"
+#include "Mode6.h"
 
 class ofApp : public ofBaseApp{
 	public:
@@ -35,6 +37,8 @@ class ofApp : public ofBaseApp{
 		Mode2 *mode2;
 		Mode3 *mode3;
 		Mode4 *mode4;
+		Mode5 *mode5;
+		Mode6 *mode6;
 		
 		bool increase = false;
 		bool decrease = false;

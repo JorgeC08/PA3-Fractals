@@ -3,7 +3,7 @@
 #include "ofMain.h"
 class FractalMode{
 	public:
-		virtual void draw(){};
+		virtual void draw() = 0;
 
 		void setActivate(bool activate)
 		{
