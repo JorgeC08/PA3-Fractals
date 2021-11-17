@@ -11,6 +11,7 @@ Mode2::Mode2(int length, int n, int x, int y, int d)
 
 void Mode2::draw()
 {
+    ofSetColor(220, 20, 60);
     drawHelper(length, n, x, y, d);
 }
 

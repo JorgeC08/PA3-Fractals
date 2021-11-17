@@ -10,6 +10,7 @@ Mode3::Mode3(float x, float y, float size, int n)
 
 void Mode3::draw()
 {
+    ofSetColor(128, 0, 128);
     drawHelper(x, y, size, n);
 }
 
