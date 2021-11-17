@@ -18,7 +18,10 @@ void ofApp::update()
 {
     /* The update method is called muliple times per second
     It's in charge of updating variables and the logic of our app */
-    // ofSetBackgroundColor(0, 0, 0);
+    // ofSetBackgroundColor(0, 0, 0);]
+    mode1->setN(var);
+    mode2->setN(var);
+    mode3->setN(var);
 }
 
 //--------------------------------------------------------------

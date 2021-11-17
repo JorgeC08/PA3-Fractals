@@ -8,6 +8,14 @@ class Mode2 : public FractalMode{
         Mode2(int length, int n, int x, int y, int d);
         void draw();
         void drawHelper(int length, int n, int x, int y, int d);
+        void setN(int n)
+        {
+            this->n = n;
+        }
+        int getN()
+        {
+            return n;
+        }
             
 
     private:
