@@ -45,58 +45,6 @@ void ofApp::draw()
             Fractals[i]->draw();
         }
     }
-    // if (mode1->getActivate() == true)
-    // {
-    //     mode1->draw();
-        // ofSetColor(0, 128, 128);
-        // drawMode1(ofGetWidth() / 2, ofGetHeight() / 2, var);
-        // if(increase){
-        //     var++;
-        //     increase = false;
-        // }
-        // if(decrease){
-        //     var -= 1;
-        //     decrease = false;
-        //     if(var < 0){
-        //         var = 0;
-        //     }
-        // }
-    // }
-    // if (mode2)
-    // {
-    //     ofSetColor(220, 20, 60);
-    //     drawMode2(200, var, ofGetWidth() / 2, ofGetHeight() - 50, 30);
-    //     drawMode2(100, var, ofGetWidth() / 3.99, ofGetHeight() - 50, 30);
-    //     drawMode2(100, var, ofGetWidth() / 1.32, ofGetHeight() - 50, 30);
-    //     if(increase){
-    //         var++;
-    //         increase = false;
-    //     }
-    //     if(decrease){
-    //         var -= 1;
-    //         decrease = false;
-    //         if(var < 0){
-    //             var = 0;
-    //         }
-    //     }
-    // }
-    // if (mode3)
-    // {
-    //     ofSetColor(128, 0, 128);
-    //     drawMode3(ofGetWidth() / 3, 10, ofGetHeight() / 2, var);
-    //     if(increase){
-    //         var++;
-    //         increase = false;
-    //     }
-    //     if(decrease){
-    //         var -= 1;
-    //         decrease = false;
-    //         if(var < 0){
-    //             var = 0;
-    //         }
-    //     }
-    // }
-// }
 }
 
 //--------------------------------------------------------------
