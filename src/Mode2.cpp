@@ -13,6 +13,8 @@ void Mode2::draw()
 {
     ofSetColor(220, 20, 60);
     drawHelper(length, n, x, y, d);
+    drawHelper(length - 100, n, x + 300, y, d);
+    drawHelper(length - 100, n, x - 300, y, d);
 }
 
 void Mode2::drawHelper(int length, int n, int x, int y, int d)
