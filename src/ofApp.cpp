@@ -10,6 +10,7 @@ void ofApp::setup()
     mode4 = new Mode4(ofGetWidth() / 2, ofGetHeight() / 2, var);
     mode5 = new Mode5(ofGetWidth() / 2, ofGetHeight() / 2, var);
     mode6 = new Mode6(ofGetWidth() / 2, ofGetHeight() / 2, var);
+    mode7 = new Mode7(ofGetWidth() / 2, ofGetHeight() / 2, var);
 
     Fractals.push_back(mode1);
     Fractals.push_back(mode2);
@@ -17,6 +18,7 @@ void ofApp::setup()
     Fractals.push_back(mode4);
     Fractals.push_back(mode5);
     Fractals.push_back(mode6);
+    Fractals.push_back(mode7);
 }
 
 //--------------------------------------------------------------
@@ -30,6 +32,8 @@ void ofApp::update()
     mode3->setN(var);
     mode4->setN(var);
     mode5->setN(var);
+    mode6->setN(var);
+    mode7->setN(var);
 }
 
 //--------------------------------------------------------------
@@ -72,12 +76,16 @@ void ofApp::keyPressed(int key)
         mode6->setActivate(true);
         break;
     case '7':
+        mode7->setActivate(true);
+        break;
+    case '8':
         mode1->setActivate(false);
         mode2->setActivate(false);
         mode3->setActivate(false);
         mode4->setActivate(false);
         mode5->setActivate(false);
         mode6->setActivate(false);
+        mode7->setActivate(false);
         break;
 
     // Para aumentar y disminuir el tamaño
