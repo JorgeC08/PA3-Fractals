@@ -37,6 +37,27 @@ void ofApp::update()
     mode3->setN(var);
     mode4->setN(var);
     mode5->setN(var);
+
+    if(animation){
+        count++;
+        if(var < 5 && !restAnim){
+            sumAnim = true;
+        }
+        if(var == 5){
+            sumAnim = false;
+            restAnim = true;
+        }
+        if(var == 0){
+            sumAnim = true;
+            restAnim = false;
+        }
+        if((count % 20 == 0) && restAnim){
+            var--;
+        }
+        if((count % 20 == 0) && sumAnim){
+            var++;
+        }
+    }
 }
 
 //--------------------------------------------------------------
@@ -133,7 +154,14 @@ void ofApp::keyPressed(int key)
             var -= 1;
         }
         break;
+    // Para activar y desactivar la animacion
+    case ' ':
+        animation = true;
+        break;
+    case 'c':
+        animation = false;
     }
+
 }
 
 //--------------------------------------------------------------

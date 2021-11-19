@@ -46,4 +46,10 @@ class ofApp : public ofBaseApp{
 		
 		vector<ofColor> colors;
 
+		// Animation
+		int count = 0;
+		bool animation = false;
+		bool restAnim = false;
+		bool sumAnim = false;
+	
 };
