@@ -3,13 +3,17 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
+    for(int i = 0; i < 15; i++){
+        ofColor dif = ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255));
+        colors.push_back(dif);
+    }
     ofSetBackgroundColor(0, 0, 0);
-    mode1 = new Mode1(ofGetWidth() / 2, ofGetHeight() / 2, var);
-    mode2 = new Mode2(200, var, ofGetWidth() / 2, ofGetHeight() - 50, 30);
-    mode3 = new Mode3(ofGetWidth() / 3, 10, ofGetHeight() / 2, var);
-    mode4 = new Mode4(ofGetWidth() / 2, ofGetHeight() / 2, var);
-    mode5 = new Mode5(ofGetWidth() / 2, ofGetHeight() / 2, var);
-    mode6 = new Mode6(ofGetWidth() / 2, ofGetHeight() / 2, var);
+    mode1 = new Mode1(ofGetWidth() / 2, ofGetHeight() / 2, var, colors);            // Square
+    mode2 = new Mode2(200, var, ofGetWidth() / 2, ofGetHeight() - 50, 30, colors);  // Trees
+    mode3 = new Mode3(ofGetWidth() / 3, 10, ofGetHeight() / 2, var, colors);        // Sierpinski
+    mode4 = new Mode4(ofGetWidth() / 2, ofGetHeight() / 2, var, colors);    
+    mode5 = new Mode5(ofGetWidth() / 2, ofGetHeight() / 2, var, colors);
+    mode6 = new Mode6(ofGetWidth() / 2, ofGetHeight() / 2, var, colors);
 
     Fractals.push_back(mode1);
     Fractals.push_back(mode2);
@@ -17,6 +21,9 @@ void ofApp::setup()
     Fractals.push_back(mode4);
     Fractals.push_back(mode5);
     Fractals.push_back(mode6);
+    
+
+
 }
 
 //--------------------------------------------------------------
@@ -54,39 +61,73 @@ void ofApp::keyPressed(int key)
     switch (key)
     {
     case '1':
-        mode1->setActivate(true);
+        // mode1->setActivate(true);
+        if(mode1->getActivate()){
+            mode1->setActivate(false);
+        }
+        else{
+            mode1->setActivate(true);
+        }
         break;
     case '2':
-        mode2->setActivate(true);
+        // mode2->setActivate(true);
+        if(mode2->getActivate()){
+            mode2->setActivate(false);
+        }
+        else{
+            mode2->setActivate(true);
+        }
         break;
     case '3':
-        mode3->setActivate(true);
+        // mode3->setActivate(true);
+        if(mode3->getActivate()){
+            mode3->setActivate(false);
+        }
+        else{
+            mode3->setActivate(true);
+        }
         break;
     case '4':
-        mode4->setActivate(true);
+        // mode4->setActivate(true);
+        if(mode4->getActivate()){
+            mode4->setActivate(false);
+        }
+        else{
+            mode4->setActivate(true);
+        }
         break;
     case '5':
-        mode5->setActivate(true);
+        // mode5->setActivate(true);
+        if(mode5->getActivate()){
+            mode5->setActivate(false);
+        }
+        else{
+            mode5->setActivate(true);
+        }
         break;
     case '6':
-        mode6->setActivate(true);
+        // mode6->setActivate(true);
+        if(mode6->getActivate()){
+            mode6->setActivate(false);
+        }
+        else{
+            mode6->setActivate(true);
+        }
         break;
-    case '7':
-        mode1->setActivate(false);
-        mode2->setActivate(false);
-        mode3->setActivate(false);
-        mode4->setActivate(false);
-        mode5->setActivate(false);
-        mode6->setActivate(false);
-        break;
+    // case '7':
+    //     mode1->setActivate(false);        
+    //     mode2->setActivate(false);
+    //     mode3->setActivate(false);
+    //     mode4->setActivate(false);
+    //     mode5->setActivate(false);
+    //     mode6->setActivate(false);
+    //     break;
 
     // Para aumentar y disminuir el tamaño
     case '=':
-        // increase = true;
         var += 1;
         break;
     case '-':
-        // decrease = true;
         if(var != 0)
         {
             var -= 1;

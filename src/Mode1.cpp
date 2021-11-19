@@ -1,15 +1,17 @@
 #include "Mode1.h"
 
-Mode1::Mode1(int x, int y, int n)
+Mode1::Mode1(int x, int y, int n, vector<ofColor> colors)
 {
     this->x = x;
     this->y = y;
     this->n = n;
+    this->colors = colors;
 }
 
 void Mode1::draw()
 {
-    ofSetColor(0, 128, 128);
+    int i = n;
+    ofSetColor(colors[i]);
     drawHelper(x, y, n);
 }
 void Mode1::drawHelper(int x, int y, int n)

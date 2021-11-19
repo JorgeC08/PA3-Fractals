@@ -1,17 +1,19 @@
 #include "Mode2.h"
 
-Mode2::Mode2(int length, int n, int x, int y, int d)
+Mode2::Mode2(int length, int n, int x, int y, int d, vector<ofColor> colors)
 {
     this->length = length;
     this->n = n;
     this->x = x;
     this->y = y;
     this->d = d;
+    this->colors = colors;
 }
 
 void Mode2::draw()
 {
-    ofSetColor(220, 20, 60);
+    int i = n;
+    ofSetColor(colors[i]);
     drawHelper(length, n, x, y, d);
     drawHelper(length - 100, n, x + 300, y, d);
     drawHelper(length - 100, n, x - 300, y, d);

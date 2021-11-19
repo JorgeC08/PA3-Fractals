@@ -43,5 +43,7 @@ class ofApp : public ofBaseApp{
 		bool increase = false;
 		bool decrease = false;
 		int var = 1;
+		
+		vector<ofColor> colors;
 
 };

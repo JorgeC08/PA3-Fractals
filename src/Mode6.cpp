@@ -1,15 +1,17 @@
 #include "Mode6.h"
 
-Mode6::Mode6(float x, float y, int n)
+Mode6::Mode6(float x, float y, int n, vector<ofColor> colors)
 {
     this->x = x;
     this->y = y;
     this->n = n;
+    this->colors = colors;
 }
 
 void Mode6::draw()
 {
-    ofSetColor(128, 0, 128);
+    int i = n;
+    ofSetColor(colors[i]);
     drawHelper(x, y, n * 100);
 }
 

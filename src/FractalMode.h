@@ -13,7 +13,8 @@ class FractalMode{
 		{
 			return this->activate;
 		}
-		
+		vector<ofColor> colors;
+
 	protected:
 		bool activate = false;
 

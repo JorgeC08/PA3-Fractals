@@ -1,16 +1,18 @@
 #include "Mode3.h"
 
-Mode3::Mode3(float x, float y, float size, int n)
+Mode3::Mode3(float x, float y, float size, int n, vector<ofColor> colors)
 {
     this->x = x;
     this->y = y;
     this->size = size;
     this->n = n;
+    this->colors = colors;
 }
 
 void Mode3::draw()
 {
-    ofSetColor(128, 0, 128);
+    int i = n;
+    ofSetColor(colors[i]);
     drawHelper(x, y, size, n);
 }
 

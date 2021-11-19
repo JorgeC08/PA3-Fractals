@@ -5,7 +5,7 @@
 
 class Mode5 : public FractalMode{
     public:
-        Mode5(float x, float y, int n);
+        Mode5(float x, float y, int n, vector<ofColor> colors);
         void draw();
         void drawHelper(float x, float y, int n);
         void setN(int n)
