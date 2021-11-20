@@ -45,5 +45,13 @@ class ofApp : public ofBaseApp{
 		bool increase = false;
 		bool decrease = false;
 		int var = 1;
+		
+		vector<ofColor> colors;
 
+		// Animation
+		int count = 0;
+		bool animation = false;
+		bool restAnim = false;
+		bool sumAnim = false;
+	
 };

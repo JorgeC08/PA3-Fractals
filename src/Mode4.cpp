@@ -1,15 +1,17 @@
 #include "Mode4.h"
 
-Mode4::Mode4(int x, int y, int n)
+Mode4::Mode4(int x, int y, int n, vector<ofColor> colors)
 {
     this->x = x;
     this->y = y;
     this->n = n;
+    this->colors = colors;
 }
 
 void Mode4::draw()
 {
-    ofSetColor(0, 255, 0);
+    int i = n;
+    ofSetColor(colors[i]);
     drawHelper(x, y, n);
 }
 void Mode4::drawHelper(int x, int y, float n)

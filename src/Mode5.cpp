@@ -1,15 +1,17 @@
 #include "Mode5.h"
 
-Mode5::Mode5(float x, float y, int n)
+Mode5::Mode5(float x, float y, int n, vector<ofColor> colors)
 {
     this->x = x;
     this->y = y;
     this->n = n;
+    this->colors = colors;
 }
 
 void Mode5::draw()
 {
-    ofSetColor(250, 250, 0);
+    int i = n;
+    ofSetColor(colors[i]);
     drawHelper(x, y, n);
 }
 
