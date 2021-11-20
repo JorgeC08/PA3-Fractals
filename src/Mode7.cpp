@@ -9,7 +9,7 @@ Mode7::Mode7(float x, float y, int n)
 
 void Mode7::draw()
 {
-    ofSetColor(255, 0, 0);
+    ofSetColor(250, 180, 180);
     drawHelper(x, y, n * 100);
 }
 
