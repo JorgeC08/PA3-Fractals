@@ -1,15 +1,17 @@
 #include "Mode7.h"
 
-Mode7::Mode7(float x, float y, int n)
+Mode7::Mode7(float x, float y, int n, vector<ofColor> colors)
 {
     this->x = x;
     this->y = y;
     this->n = n;
+    this->colors = colors;
 }
 
 void Mode7::draw()
 {
-    ofSetColor(250, 180, 180);
+    int i = n;
+    ofSetColor(colors[i]);
     drawHelper(x, y, n * 100);
 }
 

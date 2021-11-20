@@ -14,7 +14,7 @@ void ofApp::setup()
     mode4 = new Mode4(ofGetWidth() / 2, ofGetHeight() / 2, var, colors);    
     mode5 = new Mode5(ofGetWidth() / 2, ofGetHeight() / 2, var, colors);
     mode6 = new Mode6(ofGetWidth() / 2, ofGetHeight() / 2, var, colors);
-    mode7 = new Mode7(ofGetWidth() / 2, ofGetHeight() / 2, var);
+    mode7 = new Mode7(ofGetWidth() / 2, ofGetHeight() / 2, var, colors);
 
     Fractals.push_back(mode1);
     Fractals.push_back(mode2);
@@ -83,67 +83,26 @@ void ofApp::keyPressed(int key)
     switch (key)
     {
     case '1':
-        // mode1->setActivate(true);
-        if(mode1->getActivate()){
-            mode1->setActivate(false);
-        }
-        else{
-            mode1->setActivate(true);
-        }
+        mode1->setActivate(!mode1->getActivate());
         break;
     case '2':
-        // mode2->setActivate(true);
-        if(mode2->getActivate()){
-            mode2->setActivate(false);
-        }
-        else{
-            mode2->setActivate(true);
-        }
+        mode2->setActivate(!mode2->getActivate());
         break;
     case '3':
-        // mode3->setActivate(true);
-        if(mode3->getActivate()){
-            mode3->setActivate(false);
-        }
-        else{
-            mode3->setActivate(true);
-        }
+        mode3->setActivate(!mode3->getActivate());
         break;
     case '4':
-        // mode4->setActivate(true);
-        if(mode4->getActivate()){
-            mode4->setActivate(false);
-        }
-        else{
-            mode4->setActivate(true);
-        }
+        mode4->setActivate(!mode4->getActivate());
         break;
     case '5':
-        // mode5->setActivate(true);
-        if(mode5->getActivate()){
-            mode5->setActivate(false);
-        }
-        else{
-            mode5->setActivate(true);
-        }
+        mode5->setActivate(!mode5->getActivate());
         break;
     case '6':
-        // mode6->setActivate(true);
-        if(mode6->getActivate()){
-            mode6->setActivate(false);
-        }
-        else{
-            mode6->setActivate(true);
-        }
+        mode6->setActivate(!mode6->getActivate());
         break;
-    // case '7':
-    //     mode1->setActivate(false);        
-    //     mode2->setActivate(false);
-    //     mode3->setActivate(false);
-    //     mode4->setActivate(false);
-    //     mode5->setActivate(false);
-    //     mode6->setActivate(false);
-    //     break;
+    case '7':
+        mode7->setActivate(!mode7->getActivate());
+        break;
 
     // Para aumentar y disminuir el tamaño
     case '=':

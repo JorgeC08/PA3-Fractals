@@ -1,7 +1,6 @@
 #pragma once
 
 #include "FractalMode.h"
-// #include <cmath>
 
 class Mode3 : public FractalMode{
     public:
