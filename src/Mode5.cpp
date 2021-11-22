@@ -10,16 +10,14 @@ Mode5::Mode5(float x, float y, int n, vector<ofColor> colors)
 
 void Mode5::draw()
 {
-    int i = n;
-    ofSetColor(colors[i]);
     drawHelper(x, y, n);
-    // drawHelper(x, y, n * 100);
 }
 
 void Mode5::drawHelper(float x, float y, int n)
-{
-   ofDrawCircle(x, y, n * 10);
-   //ofDrawCircle(x, y, n);
+{    
+    int i = n;
+    ofSetColor(colors[i]);
+    ofDrawCircle(x, y, n * 10);
 
    if(n > 1)
    {

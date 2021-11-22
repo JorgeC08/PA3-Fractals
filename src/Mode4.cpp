@@ -10,8 +10,7 @@ Mode4::Mode4(int x, int y, int n, vector<ofColor> colors)
 
 void Mode4::draw()
 {
-    int i = n;
-    ofSetColor(colors[i]);
+
     drawHelper(x, y, n);
 }
 void Mode4::drawHelper(int x, int y, float n)
@@ -20,6 +19,8 @@ void Mode4::drawHelper(int x, int y, float n)
 
     if (n > 1)
     {
+        int i = n;
+        ofSetColor(colors[i]);   
         drawHelper(x, y, n * 0.75);
     }
 }
