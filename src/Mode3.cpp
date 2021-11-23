@@ -11,8 +11,7 @@ Mode3::Mode3(float x, float y, float size, int n, vector<ofColor> colors)
 
 void Mode3::draw()
 {
-    int i = n;
-    ofSetColor(colors[i]);
+    ofSetColor(colors[n]);
     drawHelper(x, y, size, n);
 }
 

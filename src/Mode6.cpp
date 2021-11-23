@@ -10,8 +10,7 @@ Mode6::Mode6(float x, float y, int n, vector<ofColor> colors)
 
 void Mode6::draw()
 {
-    int i = n;
-    ofSetColor(colors[i]);
+    ofSetColor(colors[n]);
     drawHelper(x, y, n * 100);
 }
 
