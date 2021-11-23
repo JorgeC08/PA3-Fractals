@@ -42,11 +42,13 @@ class ofApp : public ofBaseApp{
 		Mode6 *mode6;
 		Mode7 *mode7;
 		
-		bool increase = false;
-		bool decrease = false;
-		int var = 1;
-		
 		vector<ofColor> colors;
+
+		int var = 1;
+
+		// Background music
+
+		ofSoundPlayer backgrounfTheme;
 
 		// Animation
 		int count = 0;

@@ -3,6 +3,11 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
+    backgrounfTheme.load("Background_theme.mp3");
+    backgrounfTheme.setVolume(0.25);
+    backgrounfTheme.play();
+    backgrounfTheme.setLoop(true);
+
     for(int i = 0; i < 200; i++){
         ofColor dif = ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255));
         colors.push_back(dif);
@@ -31,6 +36,8 @@ void ofApp::update()
     /* The update method is called muliple times per second
     It's in charge of updating variables and the logic of our app */
     // ofSetBackgroundColor(0, 0, 0);]
+    ofSoundUpdate();
+
     mode1->setN(var);
     mode2->setN(var);
     mode3->setN(var);
