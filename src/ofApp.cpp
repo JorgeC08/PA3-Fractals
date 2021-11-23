@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-    for(int i = 0; i < 15; i++){
+    for(int i = 0; i < 200; i++){
         ofColor dif = ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255));
         colors.push_back(dif);
     }
