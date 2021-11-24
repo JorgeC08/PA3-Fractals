@@ -10,4 +10,4 @@ New specs:
 
 #1. Added 3 new fractals.
 
-#2. 
+#2. Added Background Music
