@@ -18,9 +18,9 @@ void Mode1::drawHelper(int x, int y, int n, int newColor)
     {
         ofSetColor(colors[newColor]);
         ofDrawRectangle(x, y, 100, 100);
-        drawHelper(x + 100, y, n - 1, newColor + 2);
-        drawHelper(x - 100, y, n - 1, newColor + 4);
-        drawHelper(x, y + 100, n - 1, newColor + 6);
-        drawHelper(x, y - 100, n - 1, newColor + 8);
+        drawHelper(x + 100, y, n - 1, n - 1);
+        drawHelper(x - 100, y, n - 1, n - 1);
+        drawHelper(x, y + 100, n - 1, n - 1);
+        drawHelper(x, y - 100, n - 1, n - 1);
     }
 }
