@@ -19,8 +19,7 @@ void Mode4::drawHelper(int x, int y, float n)
 
     if (n > 1)
     {
-        int i = n;
-        ofSetColor(colors[i]);   
+        ofSetColor(colors[n]);   
         drawHelper(x, y, n * 0.75);
     }
 }

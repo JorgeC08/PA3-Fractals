@@ -15,8 +15,7 @@ void Mode5::draw()
 
 void Mode5::drawHelper(float x, float y, int n)
 {    
-    int i = n;
-    ofSetColor(colors[i]);
+    ofSetColor(colors[n]);
     ofDrawCircle(x, y, n * 10);
 
    if(n > 1)
