@@ -4,7 +4,7 @@
 If you have any notes to add for your TA about the project specs or creative additions, you may do so in this section of the README
 
 Jacob M. Delgado López - email: jacob.delgado@upr.edu
-Jorge- email: @upr.edu
+Jorge Colón- email: jorge.colon27@upr.edu
 
 New specs:
 
